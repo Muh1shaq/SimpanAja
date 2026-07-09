@@ -1,5 +1,6 @@
 import { useState, FormEvent } from 'react';
-import { Package, Lock, Mail, Eye, EyeOff, AlertCircle, ArrowLeft, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Package, Lock, Mail, Eye, EyeOff, AlertCircle, ArrowLeft, CheckCircle, Warehouse } from 'lucide-react';
 import { useAuth } from './AuthContext';
 import { supabase } from '../../config/supabase';
 
@@ -62,9 +63,9 @@ export default function LoginPage() {
           {/* Logo */}
           <div className="flex flex-col items-center mb-8">
             <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg shadow-indigo-500/30">
-              <Package size={28} className="text-white" />
+              <Warehouse size={28} className="text-white" />
             </div>
-            <h1 className="text-2xl font-bold text-white tracking-tight">SimpanAja</h1>
+            <h1 className="text-2xl font-bold text-white tracking-tight">Masuk ke SimpanAja</h1>
             <p className="text-slate-500 text-sm mt-1">Warehouse Management System</p>
           </div>
 
@@ -197,15 +198,24 @@ export default function LoginPage() {
           )}
 
           {!isForgotPassword && (
-            <div className="mt-6 pt-6 border-t border-slate-800 text-center">
-              <p className="text-xs text-slate-600">
-                Hubungi Admin jika Anda tidak dapat masuk ke sistem.
+            <div className="mt-5 pt-5 border-t border-slate-800 text-center">
+              <p className="text-sm text-slate-500">
+                Belum punya akun?{' '}
+                <Link to="/register" className="text-indigo-400 hover:text-indigo-300 font-medium transition-colors">
+                  Daftar sekarang
+                </Link>
               </p>
             </div>
           )}
         </div>
 
-        <p className="text-center text-xs text-slate-700 mt-6">
+        <div className="mt-5 text-center">
+          <Link to="/" className="inline-flex items-center gap-1.5 text-xs text-slate-600 hover:text-slate-400 transition-colors">
+            <ArrowLeft size={12} /> Kembali ke Beranda
+          </Link>
+        </div>
+
+        <p className="text-center text-xs text-slate-700 mt-4">
           SimpanAja v1.0.0 · Warehouse Management System
         </p>
       </div>

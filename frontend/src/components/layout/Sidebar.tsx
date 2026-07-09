@@ -52,7 +52,11 @@ export function Sidebar() {
       {/* Navigation */}
       <nav className="flex-1 py-4 px-3 space-y-1 overflow-y-auto">
         {NAV_ITEMS.map(item => {
-          const isActive = location.pathname === item.path;
+          // Dashboard (/app) should only be active on exact match
+          const isActive =
+            item.path === '/app'
+              ? location.pathname === '/app' || location.pathname === '/app/'
+              : location.pathname.startsWith(item.path);
           return (
             <NavLink
               key={item.id}

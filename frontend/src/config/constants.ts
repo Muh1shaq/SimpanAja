@@ -9,13 +9,13 @@ export const APP_DESCRIPTION = 'Warehouse Management System';
 
 // ===== Navigation Items =====
 export const NAV_ITEMS = [
-  { id: 'dashboard', label: 'Dashboard', path: '/', icon: 'LayoutDashboard' },
-  { id: 'master-data', label: 'Master Data', path: '/master-data', icon: 'Database' },
-  { id: 'inventory', label: 'Inventory', path: '/inventory', icon: 'Package' },
-  { id: 'stock-opname', label: 'Stock Opname', path: '/stock-opname', icon: 'ClipboardCheck' },
-  { id: 'inbound', label: 'Inbound', path: '/inbound', icon: 'ArrowDownToLine' },
-  { id: 'outbound', label: 'Outbound', path: '/outbound', icon: 'ArrowUpFromLine' },
-  { id: 'reports', label: 'Reports', path: '/reports', icon: 'FileBarChart' },
+  { id: 'dashboard', label: 'Dashboard', path: '/app', icon: 'LayoutDashboard' },
+  { id: 'master-data', label: 'Master Data', path: '/app/master-data', icon: 'Database' },
+  { id: 'inventory', label: 'Inventory', path: '/app/inventory', icon: 'Package' },
+  { id: 'stock-opname', label: 'Stock Opname', path: '/app/stock-opname', icon: 'ClipboardCheck' },
+  { id: 'inbound', label: 'Inbound', path: '/app/inbound', icon: 'ArrowDownToLine' },
+  { id: 'outbound', label: 'Outbound', path: '/app/outbound', icon: 'ArrowUpFromLine' },
+  { id: 'reports', label: 'Reports', path: '/app/reports', icon: 'FileBarChart' },
 ] as const;
 
 // ===== Zone Configuration =====
